@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --main-color:#5C2FC2;
+    --orange:#DC5F00;
+    --white:#FFF;
+    --light-color:#666;
+    --black:#000;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: all .3s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-margin-top: 7rem;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    z-index: 1000;
+}
+.header .fa-bars-staggered,
+.header .fa-circle-xmark{
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+.header .logo{
+    font-size: 2rem;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.header .logo span{
+    color: var(--orange);
+}
+.header .navbar a{
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: capitalize;
+    padding: 1rem;
+    margin: 0 1rem;
+}
+.header .navbar a:hover{
+    color: var(--orange);
+}
+.header .navbar a.btn{
+    background-color: var(--main-color);
+    color: var(--white);
+    padding:1.5rem 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+.header .navbar a.btn:hover{
+    box-shadow: .1rem .3rem .6rem #333;
+}
+.home{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 2rem;
+    margin-bottom: 10rem;
+}
+
+img.google{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+img.linkedin{
+    bottom: 20%;
+    right: 15%;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+img.twitter{
+    bottom: 25%;
+    left: 15%;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+img.amazon{
+    top: 25%;
+    right: 15%;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+img.figma{
+    bottom: 6%;
+    right:50%;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+img.indeed{
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+.home .head{
+    color: var(--orange);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    background-color: #FFE0B5;
+    border-radius: 3rem;
+}
+.home h1{
+    font-size: 5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    text-align: center;
+}
+.home h1 span{
+    color: var(--main-color);
+}
+.home p{
+    font-size: 1.2rem;
+    color: #999;
+    line-height: 2;
+    width: 50%;
+    text-align: center;
+}
+.home .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.home .flex .btn{
+    color: var(--white);
+    background-color: var(--main-color);
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.home .flex .btn:hover{
+    scale: 1.2;
+    box-shadow: .1rem .5rem 1rem #333;
+}
+.home .flex .video{
+    color: var(--black);
+    font-size: 1.4rem;
+}
+.home .flex .video i{
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--main-color);
+    padding: 1.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.home .flex .video:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 100vh;
+    background: url(images/bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.about h1{
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.about h1 span{
+    color: var(--main-color);
+}
+.about p{
+    font-size: 1.1rem;
+    color:var(--light-color);
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+.about .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.about .box-container .box{
+    background-color: var(--white);
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: .1rem .5rem 1rem #999;
+}
+.about .box-container .box i{
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .box-container .box i.fa-user{
+    color: var(--orange);
+    background-color: antiquewhite;
+}
+.about .box-container .box i.fa-magnifying-glass{
+    color: purple;
+    background-color: plum;
+}
+.about .box-container .box i.fa-file-arrow-up{
+    color:green;
+    background-color: lightgreen;
+}
+.about .box-container .box i.fa-briefcase{
+    color: goldenrod;
+    background-color: rgb(255, 255, 150);
+}
+.about .box-container .box h3{
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: capitalize;
+}
+.about .box-container .box p{
+    color: #999;
+    line-height: 2;
+    text-align: left;
+}
+.about .box-container .box.top{
+    margin-top: 5rem;
+}
+.jobs{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5rem 5%;
+}
+.jobs h1{
+    font-size: 3.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.jobs h1 span{
+    color: var(--main-color);
+}
+.jobs p{
+    font-size: 1.1rem;
+    color: var(--light-color);
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 1.5;
+}
+.jobs .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 0;
+}
+.jobs .box-container .box{
+    box-shadow: .1rem .3rem .6rem #999;
+    border-radius: .5rem;
+    width: 27rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+.jobs .box-container .box:hover{
+    background-color: var(--main-color);
+}
+.jobs .box-container .box .flex{
+    display: flex;
+    align-items:center;
+    justify-content: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.jobs .box-container .box .flex img{
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.jobs .box-container .box .flex .text h3{
+    font-size: 1.5rem;
+    color: #333;
+    text-transform: capitalize;
+}
+.jobs .box-container .box:hover .flex .text h3{
+    color: var(--black);
+}
+.jobs .box-container .box:hover p,
+.jobs .box-container .box:hover .flex .text span{
+    color: #EEEEEE;
+}
+.jobs .box-container .box .flex .text span{
+    font-size: 1.1rem;
+    color: #666;
+    text-transform:uppercase;
+}
+.jobs .box-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.jobs .box-container .box p{
+    font-size: 1.1rem;
+    color: var(--light-color);
+    text-transform: lowercase;
+    text-align: left;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+.jobs .box-container .box .flex-btn{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    gap: 1rem;
+}
+.jobs .box-container .box .flex-btn .btn{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    padding: .5rem 1rem;
+    font-weight: 500;
+}
+.jobs .box-container .box .flex-btn .btn.blue{
+    color: blue;
+    background-color: lightblue;
+}
+.jobs .box-container .box .flex-btn .btn.orange{
+    color: var(--orange);
+    background-color: lightgoldenrodyellow;
+}
+.jobs .box-container .box .flex-btn .btn.green{
+    color:green;
+    background-color: lightgreen;
+}
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 6rem 5%;
+}
+.services h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.services h1 span{
+    color: var(--main-color);
+}
+.services p{
+    font-size: 1.1rem;
+    color: #999;
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+.services .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.services .box-container .box{
+    width: 32rem;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+}
+.services .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+.services .box-container .box .content{
+    border-left: .4rem solid var(--main-color);
+    padding:0 1rem;
+    background-color: #e0d2ff;
+}
+.services .box-container .box .content h3{
+    color: var(--main-color);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.services .box-container .box .content p{
+    width: 100%;
+    color: var(--light-color);
+    text-align: left;
+}
+.services .box-container .box .image{
+    overflow: hidden;
+    width: 100%;
+}
+.services .box-container .box:hover img{
+    scale: 1.2;
+    cursor: pointer;
+}
+.client{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 3rem 5%;
+    background-color: var(--main-color);
+}
+.client h1{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.client h1 span{
+    color: var(--main-color);
+    background-color: var(--white);
+    padding: 1rem;
+}
+.client p{
+    font-size: 1.2rem;
+    color: #EEEEEE;
+    line-height: 1.5;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 2rem 0;
+}
+.client .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+.client .box-container .box .flex img{
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    box-shadow: .1rem .5rem 1rem #EEEEEE;
+}
+.client .box-container .box{
+    background-color: var(--white);
+    border-radius: 13rem;
+    width: 33rem;
+    height: 15rem;
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    justify-content: center;
+    box-shadow: .1rem .5rem 1rem #333;
+
+}
+.client .box-container .box:hover{
+    border-radius: 0;
+    cursor: pointer;
+}
+.client .box-container .box p{
+    color: #333;
+    font-size: 1.1rem;
+    width: 100%;
+    line-height: 1.5;
+}
+.client .box-container .box .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.client .box-container .box .flex h3{
+    font-size: 1.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.client .box-container .box .flex span{
+    font-size: 1.1rem;
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+.footer{
+    padding: 1rem;
+}
+.footer .box-container{
+    display: flex;
+    align-items:start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+.footer .box-container .box{
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}s
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+.footer .box-container .box p{
+    font-size: 1.2rem;
+    color: #666;
+    text-transform: capitalize;
+    width: 40rem;
+    line-height: 2;
+}
+.footer .box-container .box a{
+    font-size: 1.4rem;
+    color: #333;
+    text-transform: capitalize;
+}
+.footer .box-container .box a i{
+    color: var(--main-color);
+    margin-right: .5rem;
+}
+.footer .box-container .box a:hover i{
+    margin-right: 1rem;
+}
+.footer .credit{
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .credit p{
+    color: #EEEEEE;
+    font-size: 1.3rem;
+}
+.footer .credit p i{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+.footer .credit p span{
+    text-decoration: underline;
+}
+.footer .credit .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.footer .credit .icons i{
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: var(--white);
+    color: var(--main-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.footer .credit .icons i:hover{
+    border-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:990px){
+    html{
+        font-size: 55%;
+    }
+  
+
+}
+@media(max-width:768px){
+    .header .navbar{
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        right: 0;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+        background-color: var(--white);
+        border-bottom: .1rem solid #EEEEEE;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.show{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .fa-bars-staggered{
+        display: inline-block;
+    }
+    .header .fa-bars-staggered.hide{
+        display: none;
+    }
+    .header .fa-circle-xmark.show{
+        display: inline-block;
+    }
+    .home h1{
+        font-size: 4rem;
+    }
+    .home p{
+        width: 100%;
+    }
+    
+}
+@media(max-width:400px){
+    html{
+        font-size: 50%;
+    }
+    img.google{
+        top: 20%;
+        left: 5%;
+    }
+    img.twitter{
+        bottom: 10%;
+        left: 3%;
+    }
+    img.linkedin{
+        bottom: 10%;
+        right: 3%;
+    }
+    img.amazon{
+        top: 10%;
+        right: 3%;
+    }
+    .about h1{
+        text-align: center;
+        width: 90%;
+    }
+    .about .box-container .box{
+        width: 35rem;
+    }
+    .about .box-container .box.top{
+        margin-top:0;
+    }
+    .jobs{
+        padding: 5rem 0;
+    }
+    .jobs h1{
+        text-align: center;
+    }
+    .jobs .box-container .box{
+        width: 35rem;
+    }
+    .footer .credit{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
